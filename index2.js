@@ -83,7 +83,7 @@ async function gameEngine() {
         score += 1;
         if (score > highScoreval) {
             highScoreval = score;
-            localStorage.setItem('highscore', JSON.stringify(highScoreval));
+            localStorage.setItem('highScore', JSON.stringify(highScoreval));
             document.querySelector("#highScore").innerHTML = `HighScore: ${highScoreval} `;
         }
         scoreElement.innerHTML = `Score: ${score}`;
@@ -127,7 +127,7 @@ async function gameEngine() {
 let highScore = localStorage.getItem("highScore");
 if (highScore === null) {
     highScoreval = 0;
-    localStorage.setItem('highscore', JSON.stringify(highScoreval));
+    localStorage.setItem('highScore', JSON.stringify(highScoreval));
 }
 else {
     highScoreval = JSON.parse(highScore);
